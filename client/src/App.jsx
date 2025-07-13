@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Navbar from './components/Navbar';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import PostList from './pages/PostList';
-import SinglePost from './pages/SinglePost';
-import PostForm from './pages/PostForm';
-import NavBar from './components/NavBar';
+import PostList from "./components/PostList";
+import SinglePost from "./components/SinglePost";
+import PostForm from "./components/PostForm";
 
 function AppRoutes() {
   const location = useLocation();
@@ -12,7 +12,7 @@ function AppRoutes() {
 
   return (
     <>
-      {!hideNav && <NavBar />}
+      {!hideNav && <Navbar />}
       <Routes>
         <Route path="/" element={<PostList />} />
         <Route path="/login" element={<Login />} />
