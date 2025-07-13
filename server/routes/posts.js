@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const postController = require('../controllers/postController');
-const { validatePost } = require('../middleware/validation');
+const { validatePost } = require('../middleware/validator');
 
 // Get all posts
 router.get('/', postController.getAllPosts);

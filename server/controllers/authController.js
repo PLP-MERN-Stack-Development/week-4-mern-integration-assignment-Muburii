@@ -20,7 +20,7 @@ exports.signup = async (req, res, next) => {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "7d" });
     res.json({ token });
   } catch (error) {
-    next(error);  // let your global error handler handle it
+    next(error); 
   }
 };
 

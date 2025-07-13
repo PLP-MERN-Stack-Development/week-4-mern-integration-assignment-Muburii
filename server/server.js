@@ -1,4 +1,3 @@
-// Import required modules
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -7,7 +6,7 @@ const path = require('path');
 
 // Import routes
 const postRoutes = require('./routes/posts');
-const categoryRoutes = require('./routes/categories');
+const categoryRoutes = require('./routes/category');
 const authRoutes = require('./routes/authRoutes.js');
 
 // Load environment variables
@@ -54,7 +53,7 @@ app.use((err, req, res, next) => {
 
 // Connect to MongoDB and start server
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(PORT, () => {
