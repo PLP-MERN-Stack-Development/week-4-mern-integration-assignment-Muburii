@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../components/ui/card";
+} from "@/components/ui/card";
 import API from "../services/api";
 
 export default function Signup() {
@@ -32,7 +32,7 @@ export default function Signup() {
         return;
       }
       localStorage.setItem("token", res.data.token);
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       alert(err.response?.data?.message || "Signup failed");
     } finally {

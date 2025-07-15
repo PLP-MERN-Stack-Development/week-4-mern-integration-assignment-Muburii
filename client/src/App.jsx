@@ -14,9 +14,10 @@ function AppRoutes() {
     <>
       {!hideNav && <Navbar />}
       <Routes>
-        <Route path="/" element={<PostList />} />
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/posts" element={<PostList />} /> 
         <Route path="/posts/:id" element={<SinglePost />} />
         <Route path="/create" element={<PostForm />} />
         <Route path="/edit/:id" element={<PostForm />} />

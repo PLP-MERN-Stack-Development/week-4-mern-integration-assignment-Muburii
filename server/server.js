@@ -7,14 +7,14 @@ const path = require('path');
 // Import routes
 const postRoutes = require('./routes/posts');
 const categoryRoutes = require('./routes/category');
-const authRoutes = require('./routes/authRoutes.js');
+const authRoutes = require('./routes/auth.js');
 
 // Load environment variables
 dotenv.config();
 
 // Initialize Express app
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());

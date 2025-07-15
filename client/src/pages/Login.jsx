@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import API from "../services/api";
 
 export default function Login() {
@@ -29,7 +29,7 @@ export default function Login() {
       }
 
       localStorage.setItem("token", res.data.token);
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
     } finally {
